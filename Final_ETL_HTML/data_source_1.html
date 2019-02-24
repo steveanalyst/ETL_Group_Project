@@ -53,57 +53,42 @@
       </div>
   </nav>
   <body>
-      <h2>Data Source 1</h2>
-      <p>•	Data extracred from Kaggle: <a href="https://www.kaggle.com/petersunga/google-amazon-facebook-employee-reviews">Google, Amazon and More Employee Reviews</a></p>
-                
-      
-<!-- Images -->
-      <div class="col-md-6">
-        <figure class="figure">
-                <img class="figure-img img-fluid my-1" src="images/reviewslink.png" height="500" width="800">
-                <figcaption class="figure-caption"><h3></h3></figcaption>
-        </figure>
-    </div>
-    <div class="a" class="col-md-6">
-            <figure class="figure">
-                <h3>Transform Data</h3>
-                    <img class="figure-img img-fluid my-1" src="images/Steve1.png" height="500" width="800">
-                    <figcaption class="figure-caption"><h3></h3></figcaption>
-                    <p>1. Selected only the needed columns.</p>
-            </figure>
-        </div>
-        <div class="a" class="col-md-6">
-                <figure class="figure">
-                        <img class="figure-img img-fluid my-1" src="images/Steve2.png" height="500" width="800">
-                        <figcaption class="figure-caption"><h3></h3></figcaption>
-                        <p>2. Filter data to only selected rows.</p>
-                </figure>
-            </div>
-            <div class="a" class="col-md-6">
-                    <figure class="figure">
-                            <img class="figure-img img-fluid my-1" src="images/Steve3.png" height="500" width="800">
-                            <figcaption class="figure-caption"><h3></h3></figcaption>
-                            <p>3. Clean coloum data to remove un-wanted values (‘Current Employee – ‘ and ‘Former Employee – ‘): and removed rows associated with “Anonymous Employee” under ‘job-title’</p>
-                    </figure>
+        <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Data Source 1</h3>
                 </div>
-                <div class="a" class="col-md-6">
-                        <figure class="figure">
-                                <img class="figure-img img-fluid my-1" src="images/Steve4.png" height="300" width="500">
-                                <figcaption class="figure-caption"><h3></h3></figcaption>
-                        </figure>
-                    </div>
-                    <div class="a" class="col-md-6">
-                            <figure class="figure">
-                                    <img class="figure-img img-fluid my-1" src="images/Steve5.png" height="300" width="500">
-                                    <figcaption class="figure-caption"><h3></h3></figcaption>
-                                    <p>4. Drop ‘NA’ values and show Final Data.</p>
-                            </figure>
-                        </div>
-                    
-      
-
-<div>
-
+                <div class="panel-body">
+                <div class="row">    
+                  <div class= "col-md-6">
+                    <img margins=40px; width = 900px; href="https://www.kaggle.com/petersunga/google-amazon-facebook-employee-reviews" src="images\reviewslink.png", alt="kaggle">
+                  </div>
+                  <hr>
+                  <div> 
+                      <br>
+                    <ul>
+                    <li>
+                      Read in the data.  
+                    </li>
+                    <br>
+                    <img margins=40px; width = 900px; src="images\readinds1.PNG", alt ="readin1">
+                     </ul>  
+                     <br>
+                    <ul>
+                        <li>Filtered out all other companies by creating a new data frame (glassdoor_google_df) using iloc company = google</li>
+                        <br>
+                        <li>“job-title” values were “Former Employee- Software engineer” or “Current Employee- Software engineer”. In order to join with data source 2, we split the job-title column into 2 different columns and set the output equal to a separate data frame (new_df).</li>
+                        <br>
+                        <li>We dropped null values but there were a few “none” entries that SQL would not accept</li>
+                        <br>
+                        <li>Renamed the columns so that the syntax would be accepted in SQL when we went to push our tables into the database (Ex: “overall-ratings”: “overall_ratings”)</li>
+                        <br>
+                        <img margins=40px; width = 900px; src = "images\cleands1.PNG", alt = "clean">
+                         </ul>
+                </div>         
+                </div>
+                  </div>
+                </div>
+              </div>
 
       
       
