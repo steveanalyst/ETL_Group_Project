@@ -21,6 +21,7 @@
               }
     </style>
   </head>
+  <body>
   <h1>ETL SQL</h1>
         <!-- Navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -55,192 +56,30 @@
           </form> -->
       </div>
   </nav>
-  <body>
-      <h2>SQL</h2>
-    <div class="a" class="col-md-6">
-
-      <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">The type of final production database to load
-        the data into (relational or non-relational).<o:p></o:p></span></strong></p>
-        
-        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">We decided to use a relational database to load
-        the data. In order to achieve this, we had to create the database and the 2
-        tables (with matching column names) in SQL first.<o:p></o:p></span></strong></p>
-        
-        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Challenges:<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraph" style="margin-left:108.2pt;mso-add-space:auto;
-        text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-        Symbol;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;
-        mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
-        &quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi">The amount of characters in
-        some of the columns were over 5,000 characters. We had to keep dropping our
-        table in SQL and re-create the table with a high enough VARCHAR to accept the
-        dataframe<o:p></o:p></span></strong></p>
-        
-        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">The final tables or collections that will be
-        used in the production database.<o:p></o:p></span></strong></p>
-        
-        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Final Tables:<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpFirst" style="margin-left:108.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-        Symbol;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;
-        mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
-        &quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi">glassdoor_google<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:144.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level2 lfo1"><!--[if !supportLists]--><strong><span style="font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
-        font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Columns:<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">company<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">job_title_cleaned<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">overall_ratings<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">work_balance_star<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:108.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-        Symbol;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;
-        mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
-        &quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi">google_job_description<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:144.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level2 lfo1"><!--[if !supportLists]--><strong><span style="font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
-        font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Columns:<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Company<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Title<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Category<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Responsibilities<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Minimum_Qualifications<o:p></o:p></span></strong></p>
-        
-        <p class="MsoListParagraphCxSpLast" style="margin-left:180.2pt;mso-add-space:
-        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
-        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
-        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
-        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
-        mso-bidi-theme-font:minor-bidi">Preferred_Qualifications<o:p></o:p></span></strong></p>
-      <!---<p>•	Data extracred from Kaggle: <a href="https://www.kaggle.com/petersunga/google-amazon-facebook-employee-reviews">Google, Amazon and More Employee Reviews</a></p>-->
-    </div>            
-      
-<!-- Images -->
-      <div class="col-md-6">
-        <figure class="figure">
-                <img class="figure-img img-fluid my-1" src="images/SQL.png" height="500" width="800">
-                <figcaption class="figure-caption"><h3></h3></figcaption>
-        </figure>
-    </div>
-    <div class="a" class="col-md-6">
-            <figure class="figure">
-                <h3>SQL JOIN</h3>
-                    <img class="figure-img img-fluid my-1" src="images/SQLJOIN.png" height="500" width="800">
-                    <figcaption class="figure-caption"><h3></h3></figcaption>
-                    <p>1. Selected only the needed columns.</p>
-            </figure>
+ 
+  <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">SQL</h3>
+        <div class="panel-body">
+        <div class="row">    
+          <div class= "col-md-6">
+                
+            <ul>
+                <li>Create the frame for the SQL tables</li>
+                <br>
+                <img margins=40px; width = 900px; src="images\SQL.png", alt ="frame">
+                <br>       
+                <li>Push the dataframes to SQL</li>
+                <br>
+                <img margins=40px; width = 900px; src = "images\pushtoSQL.PNG", alt = "push">
+                <li>Run a query in SQL to join the tables</li>
+                <img margins=40px; width = 900px; src = "images\SQLJOIN.png", alt = "join">
+                 </ul>
         </div>
-        <!---<div class="a" class="col-md-6">
-                <figure class="figure">
-                        <img class="figure-img img-fluid my-1" src="images/Steve2.png" height="500" width="800">
-                        <figcaption class="figure-caption"><h3></h3></figcaption>
-                        <p>2. Filter data to only selected rows.</p>
-                </figure>
-            </div>
-            <div class="a" class="col-md-6">
-                    <figure class="figure">
-                            <img class="figure-img img-fluid my-1" src="images/Steve3.png" height="500" width="800">
-                            <figcaption class="figure-caption"><h3></h3></figcaption>
-                            <p>3. Clean coloum data to remove un-wanted values (‘Current Employee – ‘ and ‘Former Employee – ‘): and removed rows associated with “Anonymous Employee” under ‘job-title’</p>
-                    </figure>
-                </div>
-                <div class="a" class="col-md-6">
-                        <figure class="figure">
-                                <img class="figure-img img-fluid my-1" src="images/Steve4.png" height="300" width="500">
-                                <figcaption class="figure-caption"><h3></h3></figcaption>
-                        </figure>
-                    </div>
-                    <div class="a" class="col-md-6">
-                            <figure class="figure">
-                                    <img class="figure-img img-fluid my-1" src="images/Steve5.png" height="300" width="500">
-                                    <figcaption class="figure-caption"><h3></h3></figcaption>
-                                    <p>4. Drop ‘NA’ values and show Final Data.</p>
-                            </figure>
-                        </div>-->
-                    
-      
-
-<div>
-
+          </div>
+        </div>
+      </div>
+    </body>  
 
       
       
