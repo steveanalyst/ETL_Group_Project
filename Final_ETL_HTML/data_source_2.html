@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- CSS Reference -->
-    <link rel="stylesheet" type="text/css" href="/styles.css">
+   
     <!-- Font Size-->
     <style>
             div.a {
@@ -17,6 +17,8 @@
               }
     </style>
   </head>
+
+  <body>
   <h1>ETL Project</h1>
         <!-- Navbar -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
@@ -51,14 +53,27 @@
           </form> -->
       </div>
   </nav>
-  <body>
-      <div class="container">
-            <img class="figure-img img-fluid my-1" src="images/data-is-life.png">
-          
-      </div>
-    
-    </div>
 
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Data Source 2</h3>
+    </div>
+    <div class="panel-body">
+    <div class="row">    
+      <div class= "col-md-6">
+        <img margins=40px; width = 900px; href="https://www.kaggle.com/niyamatalmass/google-job-skills" src="images\datasource2.PNG", alt="kaggle">
+        <img margins=40px; width = 900px; src="images\read_in_source2.PNG", alt ="readin">
+        <ol>
+            <li>We removed all the duplicates (duplicate job postings meant same information across all rows except for location)</li>
+            <li>Dropped null values</li>
+            <li>Renamed the columns so that the syntax would be accepted in SQL when we went to push our tables into the database (Ex: “Preferred Qualifications”: “Preferred_Qualifications”)</li>
+            <img margins=40px; width = 900px; src = "images\clean_ds2.PNG", alt = "clean">
+             </ol>
+    </div>
+      </div>
+    </div>
+  </div>
+</body>
 
       
       
