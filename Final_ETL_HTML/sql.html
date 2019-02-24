@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ETL Project</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <!-- Font Size-->
+    <style>
+            div.a {
+                font-size: 18px;
+                align-self: left;
+                color: rgba(0, 0, 0, 0.753);
+                margin: 5px;
+                
+              }
+    </style>
+  </head>
+  <h1>ETL SQL</h1>
+        <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+              <!-- Home Button -->
+                  <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <!-- Nav Bar Links -->
+              <li class="nav-item">
+                  <a class="nav-link" href="etl.html">ETL</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="sql.html">Sql Data</a>
+                </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Source</a>
+                  <!--Drop Down Menu-->
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="data_source_1.html">Data Source 1</a>
+                      <a class="dropdown-item" href="data_source_2.html">Data Source 2</a>
+                  </div>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+      </div>
+  </nav>
+  <body>
+      <h2>SQL</h2>
+    <div class="a" class="col-md-6">
+
+      <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">The type of final production database to load
+        the data into (relational or non-relational).<o:p></o:p></span></strong></p>
+        
+        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">We decided to use a relational database to load
+        the data. In order to achieve this, we had to create the database and the 2
+        tables (with matching column names) in SQL first.<o:p></o:p></span></strong></p>
+        
+        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Challenges:<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraph" style="margin-left:108.2pt;mso-add-space:auto;
+        text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+        Symbol;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;
+        mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi">The amount of characters in
+        some of the columns were over 5,000 characters. We had to keep dropping our
+        table in SQL and re-create the table with a high enough VARCHAR to accept the
+        dataframe<o:p></o:p></span></strong></p>
+        
+        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">The final tables or collections that will be
+        used in the production database.<o:p></o:p></span></strong></p>
+        
+        <p class="MsoNormal" style="margin-left:.5in;text-align:justify"><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Final Tables:<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpFirst" style="margin-left:108.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+        Symbol;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;
+        mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi">glassdoor_google<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:144.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level2 lfo1"><!--[if !supportLists]--><strong><span style="font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+        font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Columns:<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">company<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">job_title_cleaned<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">overall_ratings<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">work_balance_star<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:108.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+        Symbol;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;
+        mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:
+        &quot;Times New Roman&quot;;mso-bidi-theme-font:minor-bidi">google_job_description<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:144.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level2 lfo1"><!--[if !supportLists]--><strong><span style="font-family:&quot;Courier New&quot;;mso-fareast-font-family:&quot;Courier New&quot;;
+        font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:Ignore">o<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Columns:<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Company<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Title<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Category<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Responsibilities<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpMiddle" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Minimum_Qualifications<o:p></o:p></span></strong></p>
+        
+        <p class="MsoListParagraphCxSpLast" style="margin-left:180.2pt;mso-add-space:
+        auto;text-align:justify;text-indent:-.25in;mso-list:l0 level3 lfo1"><!--[if !supportLists]--><strong><span style="font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+        Wingdings;font-weight:normal;mso-bidi-font-weight:bold"><span style="mso-list:
+        Ignore">§<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></strong><!--[endif]--><strong><span style="font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin;
+        mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&quot;Times New Roman&quot;;
+        mso-bidi-theme-font:minor-bidi">Preferred_Qualifications<o:p></o:p></span></strong></p>
+      <!---<p>•	Data extracred from Kaggle: <a href="https://www.kaggle.com/petersunga/google-amazon-facebook-employee-reviews">Google, Amazon and More Employee Reviews</a></p>-->
+    </div>            
+      
+<!-- Images -->
+      <div class="col-md-6">
+        <figure class="figure">
+                <img class="figure-img img-fluid my-1" src="images/SQL.png" height="500" width="800">
+                <figcaption class="figure-caption"><h3></h3></figcaption>
+        </figure>
+    </div>
+    <div class="a" class="col-md-6">
+            <figure class="figure">
+                <h3>SQL JOIN</h3>
+                    <img class="figure-img img-fluid my-1" src="images/SQLJOIN.png" height="500" width="800">
+                    <figcaption class="figure-caption"><h3></h3></figcaption>
+                    <p>1. Selected only the needed columns.</p>
+            </figure>
+        </div>
+        <!---<div class="a" class="col-md-6">
+                <figure class="figure">
+                        <img class="figure-img img-fluid my-1" src="images/Steve2.png" height="500" width="800">
+                        <figcaption class="figure-caption"><h3></h3></figcaption>
+                        <p>2. Filter data to only selected rows.</p>
+                </figure>
+            </div>
+            <div class="a" class="col-md-6">
+                    <figure class="figure">
+                            <img class="figure-img img-fluid my-1" src="images/Steve3.png" height="500" width="800">
+                            <figcaption class="figure-caption"><h3></h3></figcaption>
+                            <p>3. Clean coloum data to remove un-wanted values (‘Current Employee – ‘ and ‘Former Employee – ‘): and removed rows associated with “Anonymous Employee” under ‘job-title’</p>
+                    </figure>
+                </div>
+                <div class="a" class="col-md-6">
+                        <figure class="figure">
+                                <img class="figure-img img-fluid my-1" src="images/Steve4.png" height="300" width="500">
+                                <figcaption class="figure-caption"><h3></h3></figcaption>
+                        </figure>
+                    </div>
+                    <div class="a" class="col-md-6">
+                            <figure class="figure">
+                                    <img class="figure-img img-fluid my-1" src="images/Steve5.png" height="300" width="500">
+                                    <figcaption class="figure-caption"><h3></h3></figcaption>
+                                    <p>4. Drop ‘NA’ values and show Final Data.</p>
+                            </figure>
+                        </div>-->
+                    
+      
+
+<div>
+
+
+      
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

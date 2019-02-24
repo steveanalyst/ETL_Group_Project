@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ETL Home</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS Reference -->
+    <link rel="stylesheet" type="text/css" href="/Users/tonyv/Desktop/SMUBootCampHW/Tony_ETL_Project/styles.css">
+    <!-- Font Size-->
+    <style>
+            div.a {
+                font-size: 25px;
+              }
+    </style>
+  </head>
+  
+  <h1>ETL Report</h1>
+        <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+              <!-- Home Button -->
+                  <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+              <!-- Nav Bar Links -->
+              <li class="nav-item">
+                  <a class="nav-link" href="etl.html">ETL</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="sql.html">Sql Data</a>
+                </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Data Source</a>
+                  <!--Drop Down Menu-->
+                  <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="data_source_1.html">Data Source 1</a>
+                      <a class="dropdown-item" href="data_source_2.html">Data Source 2</a>
+                  </div>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+      </div>
+  </nav>
+  </head>
+  <body>
+<div class = "container-fluid">
+  <div class="col-md-6">
+        <figure class="figure">
+                <img class="figure-img img-fluid my-1" src="images/etl_graph.jpg" height="1000" width="1000">
+                <figcaption class="figure-caption"><h3></h3></figcaption>
+        </figure>
+    </div>
+    <div  class="a">
+            <p>&nbsp;</p>
+            <p style= "text-align:left";><strong>Data source 1: Google, Amazon and more Employee Reviews web scraped from Glassdoor</strong></p>
+            <p style= "text-align:left";><i>Columns:</i></p>
+            <ul>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Company (Company Name)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Location (Location of Company(May include country))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;dates (Date)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;job-title (Job Title)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;summary (Summary of Employee Review)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;pros (Employee Review (Pros))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;cons (Employee Review (Cons))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;advice-to-mgmt (Advice to Management)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;overall-ratings (Overall Rating (1-5))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;work-balance-stars (Work/Life Balance Rating (1-5))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;culture-values-stars (Culture and Values Rating (1-5))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;career-opportunities-stars (Career Opportunities Rating (1-5))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;comp-benefit-stars (Comp &amp; Benefits Rating (1-5))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;senior-management-stars (Senior Management Rating (1-5))</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;helpful-count (Helpful Review Count)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;link (Link to Review (might be outdated)</li>
+            </ul>
+            <p style= "text-align:left";><strong>Data source 2: Google Job Skills</strong></p>
+            <p style= "text-align:left";><i>Columns:</i></p>
+            <ul>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Company (Company name). Because the data set contain only Google jobs, the company field will always have value "Google"</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Title (The title of the job)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Category (Job Category)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Location (Location of the job)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Responsibilities (Responsibilities of the job)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Minimum Qualifications (Minimum qualifications for the job)</li>
+            <li style="text-indent: -.25in;">&nbsp; &nbsp;Preferred Qualifications (Preferred qualifications for the job)</li>
+            </ul>
+            <p>&nbsp;</p>
+            <!-- <p style = "text-align: left">The type of transformation needed for this data (cleaning, joining, filtering, aggregating, etc). Data source 1 has data for 5 companies, since we are joining it with a Google specific dataset, we
+            filtered out all other companies by creating a new data frame (glassdoor_google_df) using iloc company = google</li>
+            <li style="margin-left: 1.0in; text-indent: -.25in;">&nbsp; &nbsp;&ldquo;job-title&rdquo; values were &ldquo;Former Employee- Software engineer&rdquo; or &ldquo;Current Employee- Software engineer&rdquo;. In order to join with data source 2, we
+            <ul>
+            <li style="margin-left: 1.5in; text-indent: -.25in;">&nbsp; &nbsp;Split the job-title column into 2 different columns and set the output equal to a separate data frame (new_df).</li>
+            <li style="margin-left: 1.5in; text-indent: -.25in;">&nbsp; &nbsp;2<sup>nd</sup> column from new_df, appended to glassdoor_google_df.</li>
+            </ul>
+            </li>
+            <li style="margin-left: 1.0in; text-indent: -.25in;">&nbsp; &nbsp;We dropped null values but there were a few &ldquo;none&rdquo; entries that SQL would not accept.
+            <ul>
+            <li style="margin-left: 1.5in; text-indent: -.25in;">&nbsp; &nbsp;We created <em>another</em> new data frame to include all rows that did NOT have a value of &ldquo;none&rdquo;</li>
+            </ul>
+            </li>
+            <li style="margin-left: 1.0in; text-indent: -.25in;">&nbsp; &nbsp;Renamed the columns so that the syntax would be accepted in SQL when we went to push our tables into the database (Ex: &ldquo;overall-ratings&rdquo;: &ldquo;overall_ratings&rdquo;)</li>
+            </ul>
+            </li>
+            </ul>
+            <p style="margin-left: .75in;">&nbsp;</p>
+            <ul>
+            <p style = "text-align: left">Data source 2. We wanted to treat data source 2 like a key (Ex: get the job title from data source 1 and return the corresponding preferred qualifications from data source 2). In order to make it a cleaner data set:</p>
+            <ul>
+            <li style="margin-left: 1.0in; text-indent: -.25in;">&nbsp; &nbsp;We removed all the duplicates (duplicate job postings meant same information across all rows except for location)
+            <ul>
+            <li style="margin-left: 1.5in; text-indent: -.25in;">&nbsp; &nbsp;Used df.drop_duplicates</li>
+            </ul>
+            </li>
+            <li style="margin-left: 1.0in; text-indent: -.25in;">&nbsp; &nbsp;Dropped null values</li>
+            <li style="margin-left: 1.0in; text-indent: -.25in;">&nbsp; &nbsp;Renamed the columns so that the syntax would be accepted in SQL when we went to push our tables into the database (Ex: &ldquo;Preferred Qualifications&rdquo;: &ldquo;Preferred_Qualifications&rdquo;)</li>
+            </ul>
+            </li>
+            </ul> -->
+
+    
+    </div>
+    
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
